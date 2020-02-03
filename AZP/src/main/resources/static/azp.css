@@ -1,0 +1,207 @@
+body, html {
+    height: 100%;
+    margin: 0;
+
+}
+
+h1 {
+    color: white;
+  
+}
+
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.navbar a {
+  float: center;
+  padding: 25px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+/*  background-color: #000;*/
+}
+
+/*.active {
+  background-color: #4CAF50;
+}*/
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.logo {
+width: 5px;
+height: 5px;
+} 
+
+.nav{
+    
+    width:100%;
+    background: white;
+    overflow: auto;
+    
+}
+
+.ol {
+    
+    padding:0;
+    margin: 0 0 0 150px;
+    list-style: none;
+}
+
+.logo {
+    position:absolute;
+    margin-top:15px;
+    margin-left:10px;
+    
+}
+
+.bg {
+    /* The image used */
+    background-image: url("wallpaper1.jpg");
+
+    /* Full height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.doc {
+    
+     background-image: url("index.jpg");
+/*     background-repeat: no-repeat;*/
+
+
+    /* Full height */
+    height: 60%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.bg2 {
+    /* The image used */
+    background-image: url("wallpaper3.jpg");
+   
+    /* Full height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+
+.bg-with-color{
+    background-color: activecaption;
+}
+
+.formElement{
+    width: 100%;
+    display:block;
+    vertical-align: middle;
+    padding-bottom: 4px;
+
+}
+label{display: inline-block;
+      width: 140px;
+      text-align: left;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+input,select{
+    color: #000000;
+}
+.whiteText{
+    color: #ffffff;
+}
+.jumbotron {
+  .img-retina("/img/bg-1x.png", "/img/bg-2x.png", 100px, 100px);
+}
+
+@media ( min-width: 768px ) {
+    .grid-divider {
+        position: relative;
+        padding: 0;
+    }
+    .grid-divider>[class*='col-'] {
+        position: static;
+    }
+    .grid-divider>[class*='col-']:nth-child(n+2):before {
+        content: "";
+        border-left: 1px solid #DDD;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .col-padding {
+        padding: 0 15px;
+    }
+}
+
+/*label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}*/
+.azpTable {
+  table-layout: fixed;
+  width: 100% !important;
+}
+.azpTable td{
+  width: auto !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+}
+.azpTable th{
+  width: auto !important;
+  white-space: normal;
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
+}

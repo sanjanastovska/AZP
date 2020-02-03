@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Appointment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://getbootstrap.com/docs/3.4/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="azp.css"/>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script type="text/javascript" src="app.js"></script>
+
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+
+
+    </head>
+    <body class="bg2">
+    <center>
+
+        <h1 class="whiteText">Schedule an Appointment</h1>
+
+        <h3 class="whiteText">Patient's Information</h3>
+
+        <div id='patientinfo'>
+            <form id="pregledForm" method="POST" action="/pregled/zakazi">
+                <div class="formElement">
+                    <label class="whiteText" for="patientname">Name: </label>
+                    <input type="text" id="patientname" name="patientname"/>
+                </div>
+
+                <div class="formElement">
+                    <label class="whiteText" for="patientsurname">Surname: </label>
+                    <input type="text" id="patientsurname" name="patientsurname"/>
+                </div>
+                <div class="formElement">
+                    <label class="whiteText" for="patientbirth">Date Of Birth: </label>
+                    <input type="text" id="patientbirth" name="patientbirth"/>
+                </div>
+                <div class="formElement">
+                    <label class="whiteText" for="patientaddress">Address: </label>
+                    <input type="text" id="patientaddress" name="patientaddress"/>
+
+                </div>
+                <div class="formElement">
+                    <label class="whiteText" for="patientsocialnum">Social Number: </label>
+                    <input type="text" id="patientsocialnum" name="patientsocialnum"/>
+                </div>
+
+                <h3 class="whiteText">Choose Specialization: </h3>
+                <div id='specinfo' style=''>  
+                    <div class="formElement">
+                        <label  class="whiteText" for="specname">Specialization: </label>
+                        <select id='specname' name='specName' > 
+                            <option value = "0"> --Izberete</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <h3 class="whiteText">Choose Doctor:</h3>
+
+                <div id='doctorinfo' style=''>  
+                    <div class="formElement">
+                        <label class="whiteText" for="doctorname">Doctor: </label>
+                        <select id='doctorname' name='doctorName' > 
+                            <option value="0"> --Izberete</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3 class="whiteText">Choose Term:</h3>
+                <!--            <div> id = 'termininfo' style =''>-->
+                <!--                <div class="formElement"></div>-->
+
+                <label class="whiteText"> Term: </label>  
+                <input type="text" id="termininfo" name="termininfo"/>
+
+            </form>
+
+
+
+            <div class="container" style="display: flex; justify-content: center;">
+                <button id="zakazi" value="Zakazi"  class="btn btn-primary btn-lg" style="padding:10px 20px;margin-left: 20px;"> 
+<!--                     data-toggle="modal" data-target="#myModal"-->
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>     Schedule</button>
+
+<!--                <div class="modal fade" id="myModal" role="dialog"> 
+
+
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Completed!</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>You have successfully scheduled an appointment.</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+-->
+
+
+
+
+        <a href="http://localhost:8080/" class="btn btn-primary btn-lg" style="padding: 10px 25px;margin-left: 20px;">
+            <span class=" glyphicon glyphicon-remove-circle" aria-hidden="true"></span>     Cancel</a>
+
+    </div>
+
+</div>
+
+
+
+</center>
+</body>
+</html>

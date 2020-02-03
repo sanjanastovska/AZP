@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Appointment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+        <script type="text/javascript" src="zakaziPregled.js"></script>
+        <script type="text/javascript" src="loadDoctorList.js"></script>
+        <script type="text/javascript" src="easycal.js"></script>
+        <link rel="stylesheet" href="easycal.css"/>
+        <!--<link rel="stylesheet" href="azp.css"/>-->
+
+
+
+
+    </head>
+    <body class="bg2 ">
+    <center>
+
+        <h1 class="whiteText">Schedule an Appointment</h1>
+        <table id="doctorTable" class="azpTable  table table-bordered  table-hover " style="width: 100%">
+
+
+            <thead  style="width:100%" class="thead-dark" >
+                <tr>
+                    <th>ID</th>
+                    <th>DOCTOR</th>
+                    <th>SPECIALIZATION</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <button id="previousCal" class="btn btn-secondary">Prev</button>
+                        <button id="nextCal" class="btn btn-secondary">Next</button>
+                        <div class="mycal" style="width:100%;"></div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="pacientModal" class="modal fade">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">		
+                <!-- Modal footer -->
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form id="pregledForm" method="POST"  action="/pregled/zakazi">
+                            <input type="hidden" id="doctorName" name="doctorName"/>
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3" for="patientname">Name: </label>
+                                <input type="text" id="patientname"  class="form-control col-md-9" name="patientname"/>
+                            </div>
+
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3" for="patientsurname">Surname: </label>
+                                <input type="text" id="patientsurname"  class="form-control col-md-9" name="patientsurname"/>
+                            </div>
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3" for="patientbirth">Date Of Birth: </label>
+                                <input type="text" id="patientbirth"  class="form-control col-md-9" name="patientbirth"/>
+                            </div>
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3" for="patientaddress">Address: </label>
+                                <input type="text" id="patientaddress"  class="form-control col-md-9"  name="patientaddress"/>
+
+                            </div>
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3" for="patientsocialnum">Social Number: </label>
+                                <input type="text" id="patientsocialnum"  class="form-control col-md-9" name="patientsocialnum"/>
+                            </div>
+                            <div class="formElement form-group row border" >
+                                <label class="whiteText col-md-3"> Term: </label>  
+                                <input type="text" id="termininfo" readonly  class="form-control col-md-9" name="termininfo"/>
+                            </div>
+                        </form>
+                        <div class="container" style="display: flex; justify-content: center;">
+                            <button id="zakazi" value="Zakazi" class="btn btn-primary" style="padding:10px 20px;margin-left: 20px;" onclick="savePregled()" data-dismiss="modal"> 
+                                <span class="fa fa-check-circle" aria-hidden="true"></span>
+                                Schedule
+                            </button>
+                        </div>
+                    </div>	
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+            <a href="http://localhost:8080/" class="btn btn-primary" style="padding: 10px 25px;margin-left: 20px;">
+                <span class=" glyphicon glyphicon-remove-circle" aria-hidden="true"></span>     Back to Home Page</a>
+
+
+        
+
+
+    </center>
+</body>
+</html>
